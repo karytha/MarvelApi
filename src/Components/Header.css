@@ -1,0 +1,43 @@
+header {
+    margin: 0auto;
+    text-align: center;
+    padding: 15vh;
+    align-items: center;
+    background-color: #FF0000;
+    height: 60vh;
+
+}
+
+
+header h1 {
+    align-items: center;
+
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 900%;
+
+    margin: 0auto;
+}
+
+header p {
+    color: rgb(4, 4, 53);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 25pt;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+header a {
+    text-decoration: none;
+    font-weight: 700;
+    font-style: bold;
+    background-color: #FF0000;
+    border-color: #20c1dd;
+    color: whitesmoke;
+    border-radius: 10px;
+    padding: 1.0rem 2.0rem;
+    display: inline-block;
+    margin-top: 5px;
+    position: relative;
+    align-items: center;
+}

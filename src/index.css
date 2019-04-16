@@ -12,3 +12,22 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@media screen and (min-width: 320px) {
+  body {
+    font-size: 80%;
+  }
+
+  ;
+
+  header {
+    font-size: 30%;
+  }
+}
+
+/* aplica somente a partir de 480px em landscape */
+@media screen and (min-width: 480px) and (orientation: landscape) {
+  nav {
+    float: left;
+  }
+}
