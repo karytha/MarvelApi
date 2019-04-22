@@ -38,8 +38,9 @@ body.body {
   img {
     border-radius: 5px 5px 0 0;
     border-style: none;
-    width: 100px;
-    margin-left: 200px;
+    width: 400px;
+    margin-left: -200px;
+    margin-top: 20px;
 
   }
 

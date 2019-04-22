@@ -13,6 +13,7 @@ function orgComics(
             <div className="card" key={comic.id}>
                 <img src={`${comic.thumbnail.path}.${comic.thumbnail.extension}`} alt="Avatar" />
                 <div className="container">
+
                     <h4>{comic.name}</h4>
                     <p>{comic.description}</p>
                 </div>
