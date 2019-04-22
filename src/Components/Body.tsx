@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import "./Header.css";
+import "./Body.css";
 
 
 const myStyles = {
@@ -20,7 +20,7 @@ type Props = {
 class Body extends Component<Props> {
   render() {
     return (
-      <header style={myStyles}>
+      <header className="body" style={myStyles}>
         {/* <input type="text" placeholder="Search.." name="search"></input>
         <button type="submit" ><i className="fa fa-search" ></i></button> */}
         <div>

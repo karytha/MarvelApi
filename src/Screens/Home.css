@@ -1,0 +1,29 @@
+root {
+    margin-top: 25;
+    height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: #3EE5ED;
+ }
+
+Table.table {
+    margin-top: 30;
+    min-width: 800;
+    align-items: "inherit"
+}
+
+Paper.paper{
+    margin-top: 50
+}
+
+div.toolbar{
+    margin: 0auto;
+    text-align: center;
+    padding: 15vh;
+    align-items: center;
+    background-color: #ff0202e5;
+    height: 40vh;
+
+}
+

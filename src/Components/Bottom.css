@@ -3,28 +3,9 @@ header {
     text-align: center;
     padding: 15vh;
     align-items: center;
-    background-color: #FF0000;
+    background-color: #000000;
     height: 40vh;
 
-}
-
-
-header h1 {
-    align-items: center;
-
-    color: white;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 900%;
-
-    margin: 0auto;
-}
-
-header p {
-    color: rgb(4, 4, 53);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 25pt;
-    margin-top: 10px;
-    margin-bottom: 40px;
 }
 
 header a {

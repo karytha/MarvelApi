@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Background from "../Images/Marvel2.jpg";
 import "./Header.css";
-import "bulma/css/bulma.css";
+
 import { checkPropTypes } from "prop-types";
 import Search from "./Search";
 
@@ -20,10 +20,10 @@ class Header extends Component<Props> {
   render() {
     return (
       <header style={myStyles}>
-        <Search />
+
         {/* <h1> {this.props.title}</h1>
         <p>Engenheira da Computação</p> */}
-        {/* <a href="#button">{this.props.button}</a>  */}
+        {/* <a href="#button" >{this.props.button}</a> */}
       </header>
     );
   }
