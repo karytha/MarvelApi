@@ -1,28 +1,23 @@
 import React, { Component, useState } from "react";
-import { withStyles } from "@material-ui/core";
-import Table from "@material-ui/core/Table";
-import TableBody from "@material-ui/core/TableBody";
-import TableCell from "@material-ui/core/TableCell";
-import TableHead from "@material-ui/core/TableHead";
-import TableRow from "@material-ui/core/TableRow";
-import Paper from "@material-ui/core/Paper";
-
-
-
+import Header from "../Components/Header";
+import "./Home.css"
 
 
 function orgComics(
-    comics: any,
+    comics: any
     //search: string
 ) {
+
     const organComics = comics.map((comic: any) => {
         return (
-            <TableRow key={comic.id}>
-                <TableCell component="th" scope="comic">
-                    {comic.name}
-                </TableCell>
-                <TableCell align="center">{comic.description}</TableCell>
-            </TableRow>
+            <div className="card" key={comic.id}>
+                <img src={`${comic.thumbnail.path}.${comic.thumbnail.extension}`} alt="Avatar" />
+                <div className="container">
+                    <h4>{comic.name}</h4>
+                    <p>{comic.description}</p>
+                </div>
+
+            </div>
         )
     }
     );
@@ -54,25 +49,21 @@ export default class Home extends Component {
 
     render() {
         const { data } = this.state;
-        /// const [comics] = useState([]);
         return (
-            <main className="root">
-                <div className="toolbar">
-                    <Paper className="paper">
-                        <Table className="table">
-                            <TableHead>
-                                <TableRow>
-                                    <TableCell>Name</TableCell>
-                                    <TableCell>Descrição</TableCell>
-                                </TableRow>
-                            </TableHead>
-                            <TableBody>
-                                {orgComics(data)}
-                            </TableBody>
-                        </Table>
-                    </Paper>
-                </div>
-            </main>
+
+
+            <div className="paper">
+
+                <Header title="marvel" button="veja mais" />
+
+                <body className="body">
+                    {orgComics(data)}
+                </body>
+
+
+            </div>
+
+
         )
 
 
