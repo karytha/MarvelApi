@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import App from "./App";
+
 import * as serviceWorker from "./serviceWorker";
-import MainPage from "./MainPage";
+
 import Home from "./Screens/Home";
 
 ReactDOM.render(<Home />, document.getElementById("root"));

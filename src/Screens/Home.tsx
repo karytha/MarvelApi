@@ -10,14 +10,20 @@ function orgComics(
 
     const organComics = comics.map((comic: any) => {
         return (
-            <div className="card" key={comic.id}>
-                <img src={`${comic.thumbnail.path}.${comic.thumbnail.extension}`} alt="Avatar" />
-                <div className="container">
+            <div key={comic.id}>
+                <div className="card" >
+                    <div className="container">
+                        <img src={`${comic.thumbnail.path}.${comic.thumbnail.extension}`} alt="Avatar" />
 
-                    <h4>{comic.name}</h4>
-                    <p>{comic.description}</p>
+                        {/* <div className="container"> */}
+                        <h4>{comic.name}</h4>
+                        <p>{comic.description}</p>
+                    </div>
+                    {/* </div> */}
+
+
+
                 </div>
-
             </div>
         )
     }
@@ -51,24 +57,14 @@ export default class Home extends Component {
     render() {
         const { data } = this.state;
         return (
-
-
-            <div className="paper">
-
+            <div>
                 <Header title="marvel" button="veja mais" />
-
                 <body className="body">
                     {orgComics(data)}
                 </body>
 
 
             </div>
-
-
         )
-
-
     }
-
-
 }
