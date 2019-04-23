@@ -59,7 +59,9 @@ export default class Home extends Component {
         return (
             <div>
                 <Header title="marvel" button="veja mais" />
+                <h2>COMICS</h2>
                 <body className="body">
+
                     {orgComics(data)}
                 </body>
 

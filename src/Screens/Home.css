@@ -29,7 +29,7 @@ body.body {
     margin-left: -10%;
     /* margin-top: -450px; */
     margin-bottom: 80px;
-
+    margin-top: 5%;
     
 
   }
@@ -40,10 +40,12 @@ body.body {
     transition: 0.3s;
     width: 70%;
     border-radius: 5px;
-    margin-bottom: 70px;
+    margin-bottom: 100px;
     height: 30%;
     height: 70%;
     margin-left: 300px;
+    border: 15px solid black;
+    padding: 2px;
     
   }
   
@@ -52,30 +54,37 @@ body.body {
     border-radius: 8px 8px 0 0;
     border-style: none;
     width: 300px;
-    /* height: 250px; */
+    height: 310px;
     margin-left: -50px;
     margin-top: -10px;
     border: 6px solid black;
     z-index: inherit;
-    position: relative;
-    
-    
    
-    
+     
+  }
 
+  h2{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    align-items: center;
+    color: yellow;
+    font-size: 800%;
+    position: absolute;
+    margin-left: 10%;
+    z-index: 999;
+    margin-top: -80px;
+    border:15px solid black;
+    background-color: black;
   }
 
    h4{
     align-items: center;
-
     color:#000000;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 300%;
+    font-size: 400%;
     position: relative;
     margin-bottom: 50px;
     margin-left: 300px;
-    margin-top: -200px;
-    
+    margin-top: -250px;
     position: relative
     
 
@@ -85,4 +94,5 @@ body.body {
     margin-left: 300px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 150%;
+    margin-bottom: -5px;
   }
