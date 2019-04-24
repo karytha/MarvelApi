@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Search.css";
-import { withRouter, Redirect } from "react-router";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
+
 import SearchIcon from "@material-ui/icons/Search";
 import { InputBase, createStyles, Theme } from "@material-ui/core";
 import { fade } from "@material-ui/core/styles/colorManipulator";
@@ -27,11 +24,11 @@ const Search = (props: any) => {
                 placeholder="Who hero are you looking for?"
                 onChange={context.update}
                 classes={{
-                    root: classes.inputRoot,
-                    input: classes.inputInput
+                    root: "wrap",
+                    input: "searchTerm"
                 }}
             />
-            <i className="fa fa-search"><SearchIcon /></i>
+
         </div>
 
 
