@@ -1,13 +1,12 @@
 import React, { Component, useState } from "react";
 import Header from "../Components/Header";
 import "./Home.css"
-
+import Bottom from "../Components/Bottom";
 
 
 
 function orgComics(
     comics: any
-    //search: string
 ) {
 
     const organComics = comics.map((comic: any) => {
@@ -29,7 +28,6 @@ function orgComics(
 }
 
 
-
 export default class Home extends Component {
 
     state = {
@@ -38,7 +36,7 @@ export default class Home extends Component {
     }
 
     async fetchCharacters(search: any) {
-        const response = await fetch(`https://gateway.marvel.com/v1/public/characters?nameStartsWith=${search}&ts=1&orderBy=name&offset=0&apikey=a233e73069d922e3f3fef91f60b113bf&hash=732769b6e7edd45d92894d2ee2426abc`)
+        const response = await fetch(`https://gateway.marvel.com/v1/public/characters?nameStartsWith=${search}&ts=5&orderBy=name&offset=0&apikey=a233e73069d922e3f3fef91f60b113bf&hash=732769b6e7edd45d92894d2ee2426abc`)
         const responseJson = await response.json()
         this.setState({ data: responseJson.data.results })
     }
@@ -67,15 +65,13 @@ export default class Home extends Component {
         return (
             <div>
                 <Header title="marvel" button="veja mais" />
-                <input type="text" onChange={this.updateSearch.bind(this.fetchCharacters(this.state.search))}></input>
-                <h2>COMICS</h2>
-
+                <input type="text" placeholder="Por qual herói você procura?" onChange={this.updateSearch.bind(this.fetchCharacters(this.state.search))}></input>
                 <body className="body">
 
                     {orgComics(data)}
 
                 </body>
-
+                <Bottom title="MARVEL" />
 
             </div>
         )

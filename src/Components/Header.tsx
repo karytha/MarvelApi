@@ -2,12 +2,10 @@ import React, { Component } from "react";
 import Background from "../Images/Marvel2.jpg";
 import "./Header.css";
 
-import { checkPropTypes } from "prop-types";
-import Search from "./Search";
 
 const myStyles = {
   backgroundImage: "url(" + Background + ")",
-  //height: "20vh",
+  height: "25vh",
   backgroundSize: "cover"
 };
 
@@ -21,9 +19,6 @@ class Header extends Component<Props> {
     return (
       <header style={myStyles}>
 
-        {/* <h1> {this.props.title}</h1>
-        <p>Engenheira da Computação</p> */}
-        {/* <a href="#button" >{this.props.button}</a> */}
       </header>
     );
   }

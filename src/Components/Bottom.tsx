@@ -8,16 +8,14 @@ import { createMuiTheme } from "@material-ui/core";
 const myStyles = {
     //backgroundImage: "url(" + Background + ")",
 
-    height: "60vh",
+    height: "25vh",
     backgroundSize: "cover",
     h1: "fontSize: 900%",
     backgroudColor: "#000000"
 };
 
-
 type Props = {
-
-    button: any;
+    title: string;
 };
 
 function goComics() {
@@ -30,8 +28,8 @@ class Bottom extends Component<Props> {
                 {/* <input type="text" placeholder="Search.." name="search"></input>
         <button type="submit" ><i className="fa fa-search" ></i></button> */}
 
-
-                <a href="#button" onClick={goComics}>{this.props.button}</a>
+                <h1> {this.props.title}</h1>
+                {/* <a href="#button" onClick={goComics}>{this.props.button}</a> */}
             </header>
         );
     }
