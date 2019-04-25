@@ -32,23 +32,23 @@ function orgComics(
 
 
 const Series = () => {
-    const [series, setSeries] = useState([]);
+    // const [series, setSeries] = useState([]);
 
-    fetch("http://gateway.marvel.com/v1/public/comics?ts=1&apikey=a233e73069d922e3f3fef91f60b113bf&hash=732769b6e7edd45d92894d2ee2426abc").then(async (res: any) => {
-        const series: Response = await res.json();
-        setSeries(series.data.results);
-        console.log({ series });
-    }
-    ), [];
+    // fetch("http://gateway.marvel.com/v1/public/comics?ts=1&apikey=a233e73069d922e3f3fef91f60b113bf&hash=732769b6e7edd45d92894d2ee2426abc").then(async (res: any) => {
+    //     const series: Response = await res.json();
+    //     setSeries(series.data.results);
+    //     console.log({ series });
+    // }
+    // ), [];
 
     return (
 
         <div>
             <Header title="marvel" button="veja mais" />
             <h2>COMICS</h2>
-            <body className="body">
+            {/* <body className="body">
                 {orgComics(series)}
-            </body>
+            </body> */}
 
 
         </div>
@@ -57,4 +57,3 @@ const Series = () => {
 
 }
 
-export default Series;

@@ -5,7 +5,7 @@ import "./index.css";
 import * as serviceWorker from "./serviceWorker";
 
 import Home from "./Screens/Home";
-import Series from "./Components/Series";
+
 
 ReactDOM.render(<Home />, document.getElementById("root"));
 
