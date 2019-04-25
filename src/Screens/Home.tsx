@@ -1,10 +1,8 @@
-import React, { Component, useState } from "react";
+import React, { Component } from "react";
 import Header from "../Components/Header";
 import "./Home.css"
 import Bottom from "../Components/Bottom";
 import Background from "../Images/background.jpg";
-import { Md5 } from 'ts-md5/dist/md5';
-
 
 const myStyles = {
     backgroundImage: "url(" + Background + ")",
@@ -25,7 +23,7 @@ function orgComics(
                         <h4>{comic.name}</h4>
                         <p>{comic.description}</p>
                     </div>
-                    {/* </div> */}
+
                 </div>
             </div>
         )
@@ -40,14 +38,15 @@ export default class Home extends Component {
 
     state = {
         data: [],
-        search: " "
+        search: " ",
+
 
     }
 
 
     async fetchCharacters(search: any) {
 
-        const response = await fetch(`https://gateway.marvel.com/v1/public/characters?nameStartsWith=${search}&ts=1&apikey=a233e73069d922e3f3fef91f60b113bf&hash=732769b6e7edd45d92894d2ee2426abc`)
+        const response = await fetch(`https://gateway.marvel.com/v1/public/characters?nameStartsWith=${search}&ts=1&apikey=229d8edde9c1cde400c427df49959956&hash=9bf04075fdccf819051d6fc49e30ff58`)
         const responseJson = await response.json()
         this.setState({ data: responseJson.data.results })
         // console.log(hash);
@@ -56,17 +55,9 @@ export default class Home extends Component {
 
     updateSearch = (e: any) => {
         console.log(e.target.value);
-        this.setState({ search: e.target.value }),
-            () => {
-                if (this.state.search && this.state.search.length > 1) {
-                    if (this.state.search.length % 2 === 0) {
-                        this.fetchCharacters(this.state.search);
+        this.setState({ search: e.target.value })
+        this.fetchCharacters(this.state.search)
 
-                    }
-                } else {
-                    this.fetchCharacters(this.state.search);
-                }
-            }
     };
 
 
@@ -78,8 +69,7 @@ export default class Home extends Component {
             <div>
                 <Header title="marvel" button="veja mais" />
 
-                <input type="text" placeholder="Por qual herói você procura?" onChange={this.updateSearch.bind(this.fetchCharacters(this.state.search))}></input>
-                {/* <input type="text" placeholder="Por qual herói você procura?" onChange={this.updateSearch.bind(this.fetchCharacters(this.state.search)}></input> */}
+                <input type="text" placeholder="Por qual herói você procura?" onChange={this.updateSearch}></input>
 
                 <body className="body">
                     {orgComics(data)}
