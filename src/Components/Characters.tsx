@@ -9,13 +9,21 @@ type Props = {
 export default class Characters extends Component<Props>{
 
     state = {
-        showMoreInfo: false
+        showMoreInfo: false,
+        checked: false
     }
 
 
     onShowMoreInfo = () => {
         this.setState({ showMoreInfo: !this.state.showMoreInfo });
     };
+
+    onChecked = () => {
+        this.setState({ checked: this.state.checked })
+
+        console.log(this.state.checked)
+    }
+
 
     render() {
 
@@ -29,12 +37,19 @@ export default class Characters extends Component<Props>{
                         <div className="container">
                             <img src={`${comic.thumbnail.path}.${comic.thumbnail.extension}`} alt="Avatar" />
                             <h4>{comic.name}</h4>
-                            <p>{comic.description}</p>
+                            <input id="checkbox" type="checkbox" className="checkbox" onChange={this.onChecked} />
 
-                            <button key={comic.id} onClick={this.onShowMoreInfo}> Ver mais..</button>
                             {showMoreInfo === true ? (
-                                <p>{comic.modified}</p>
+                                <>
+                                    <p>{comic.description}</p>
+                                    <p>{comic.modified}</p>
+                                    <p>comics: {comic.comics.available} </p>
+                                    <p> series: {comic.series.available}</p>
+
+                                </>
                             ) : null}
+                            <button onClick={this.onShowMoreInfo}> Ver mais..</button>
+
                         </div>
                     </div>
 

@@ -39,7 +39,7 @@ export default class Home extends Component {
             <div>
                 <Header title="marvel" button="veja mais" />
 
-                <input type="text" placeholder="Por qual herói você procura?" onChange={this.updateSearch}></input>
+                <input type="text" className="text" placeholder="Por qual herói você procura?" onChange={this.updateSearch}></input>
 
                 <body className="body">
                     {comics.map(comic => {
