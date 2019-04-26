@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Background from "../Images/Marvel2.jpg";
-import "./Header.css";
+import "../CSS/Header.css";
 
 
 const myStyles = {

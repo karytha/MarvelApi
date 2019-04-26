@@ -1,8 +1,9 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import Header from "../Components/Header";
-import "./Home.css"
+import "../CSS/Home.css";
 import Bottom from "../Components/Bottom";
 import Background from "../Images/background.jpg";
+import Characters from "../Components/Characters"
 
 const myStyles = {
     backgroundImage: "url(" + Background + ")",
@@ -10,37 +11,14 @@ const myStyles = {
     backgroundSize: "cover"
 };
 
-function orgComics(
-    comics: any
-) {
-
-    const organComics = comics.map((comic: any) => {
-        return (
-            <div key={comic.id}>
-                <div className="card" >
-                    <div className="container">
-                        <img src={`${comic.thumbnail.path}.${comic.thumbnail.extension}`} alt="Avatar" />
-                        <h4>{comic.name}</h4>
-                        <p>{comic.description}</p>
-                    </div>
-
-                </div>
-            </div>
-        )
-    }
-    );
-    return organComics;
-}
-
-
 export default class Home extends Component {
 
 
     state = {
-        data: [],
+        comics: [],
         search: " ",
-
-
+        Open: false,
+        favorited: false
     }
 
 
@@ -48,7 +26,7 @@ export default class Home extends Component {
 
         const response = await fetch(`https://gateway.marvel.com/v1/public/characters?nameStartsWith=${search}&ts=1&apikey=229d8edde9c1cde400c427df49959956&hash=9bf04075fdccf819051d6fc49e30ff58`)
         const responseJson = await response.json()
-        this.setState({ data: responseJson.data.results })
+        this.setState({ comics: responseJson.data.results })
         // console.log(hash);
     }
 
@@ -62,8 +40,9 @@ export default class Home extends Component {
 
 
     render() {
-        const { data } = this.state;
-
+        const { comics } = this.state;
+        const { favorited } = this.state;
+        const { Open } = this.state;
 
         return (
             <div>
@@ -72,7 +51,10 @@ export default class Home extends Component {
                 <input type="text" placeholder="Por qual herói você procura?" onChange={this.updateSearch}></input>
 
                 <body className="body">
-                    {orgComics(data)}
+                    {comics.map(comic => {
+                        return (
+                            <Characters comic={comic} />)
+                    })}
                 </body>
                 <Bottom title="MARVEL" />
 

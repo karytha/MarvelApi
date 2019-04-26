@@ -85,12 +85,20 @@ body.body {
     position: relative;
     margin-bottom: 50px;
     margin-left: 300px;
-    margin-top: -250px;
-    
-    
-
-   
+    margin-top: -250px; 
   }
+
+  h2{
+    align-items: center;
+    color:white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 400%;
+    position: relative;
+    margin-bottom: 50px;
+    margin-left: 300px;
+    margin-top: -250px; 
+  }
+
   div p{
     margin-left: 300px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -117,5 +125,21 @@ body.body {
     font-size: 20pt;
     
 
+}
+button {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-decoration: none;
+  font-weight: 150;
+  font-style: bold;
+  background-color: #FF0000;
+  border-color: #82adb4;
+  color: whitesmoke;
+  border-radius: 10px;
+  padding: 1.0rem 2.0rem;
+  display: inline-block;
+  margin-top: 10px;
+  margin-left: 80%;
+  position: relative;
+  align-items: center;
 }
   
