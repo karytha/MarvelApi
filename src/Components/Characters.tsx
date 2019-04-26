@@ -1,8 +1,39 @@
 import React, { Component } from "react";
 import "../CSS/Home.css";
 
+interface Thumbnail {
+  path: string;
+  extension: string;
+}
+
+interface Series {
+  available: number;
+  collectionURI: any;
+  items: any;
+  returned: number;
+}
+
+interface Stories {
+  resourceURL: any;
+  name: string;
+  type: any;
+}
+interface Comic {
+  id: string;
+  name: string;
+  description: string;
+  thumbnail: Thumbnail;
+  modified: string;
+  events: any;
+  resourceURL: any;
+  stories: Stories;
+  series: Series;
+  comics: Series; //coloquei o mesmo tipo de interface que Series,
+  // porque os dois contêm os mesmos elementos com os mesmos tipos
+}
+
 type Props = {
-  comic: any;
+  comic: Comic;
 };
 
 export default class Characters extends Component<Props> {
@@ -11,11 +42,11 @@ export default class Characters extends Component<Props> {
     checked: false
   };
 
-  addToFavorites = (comicId: any, comicInfo: any) => {
+  addToFavorites = (comicId: string, comicInfo: any) => {
     localStorage.setItem(comicId, JSON.stringify(comicInfo));
   };
 
-  removeFromFavorites = (comicId: any) => {
+  removeFromFavorites = (comicId: string) => {
     localStorage.removeItem(comicId);
   };
 

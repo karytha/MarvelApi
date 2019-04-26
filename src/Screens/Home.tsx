@@ -23,7 +23,6 @@ export default class Home extends Component {
   updateSearch = (e: any) => {
     console.log(e.target.value);
     this.setState({ search: e.target.value });
-    // debounce(this.fetchCharacters(this.state.search));
     this.fetchCharacters(this.state.search);
   };
 
@@ -51,11 +50,3 @@ export default class Home extends Component {
     );
   }
 }
-
-// function debounce(func: () => void, wait = 50) {
-//   let h: any;
-//   return () => {
-//     clearTimeout(h);
-//     h = setTimeout(() => func(), wait);
-//   };
-// }
