@@ -2,14 +2,7 @@ import React, { Component, useState } from "react";
 import Header from "../Components/Header";
 import "../CSS/Home.css";
 import Bottom from "../Components/Bottom";
-import Background from "../Images/background.jpg";
 import Characters from "../Components/Characters"
-
-const myStyles = {
-    backgroundImage: "url(" + Background + ")",
-    height: "100vh",
-    backgroundSize: "cover"
-};
 
 export default class Home extends Component {
 
@@ -41,8 +34,6 @@ export default class Home extends Component {
 
     render() {
         const { comics } = this.state;
-        const { favorited } = this.state;
-        const { Open } = this.state;
 
         return (
             <div>
