@@ -32,7 +32,7 @@ export default class Home extends Component {
 
     return (
       <div>
-        <Header title="marvel" button="veja mais" />
+        <Header title="marvel" />
 
         <input
           type="text"
