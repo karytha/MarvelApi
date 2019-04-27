@@ -7,9 +7,7 @@ import Characters from "../Components/Characters";
 export default class Home extends Component {
   state = {
     comics: [],
-    search: " ",
-    Open: false,
-    favorited: false
+    search: " "
   };
 
   async fetchCharacters(search: string) {
@@ -45,6 +43,7 @@ export default class Home extends Component {
             return <Characters comic={comic} />;
           })}
         </div>
+
         <Bottom title="MARVEL" />
       </div>
     );
