@@ -1,7 +1,5 @@
 html {
   background-color: red;
-  /* background-image: url("../Images/ultimate2.jpg");
-    background-size: auto; */
 }
 div.body {
   margin-top: 100px;
@@ -9,7 +7,6 @@ div.body {
 }
 
 .card {
-  /* Add shadows to create the "card" effect */
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   position: relative;
@@ -18,16 +15,13 @@ div.body {
   background-color: white;
 }
 
-/* On mouse-over, add a deeper shadow */
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
-/* Add some padding inside the card container */
 div.container {
   padding: 2px 16px;
   margin-left: -10%;
-  /* margin-top: -450px; */
   margin-bottom: 80px;
   margin-top: 5%;
 }
@@ -45,6 +39,47 @@ div.container {
   padding: 2px;
 }
 
+.row span.box1 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.959);
+  background-color: red;
+  border: 5px black;
+  border-radius: 5%;
+  height: 120px;
+  width: 160px;
+  display: block;
+  float: left;
+  margin-top: 10%;
+  margin-left: 320px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 100px;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  color: black;
+}
+
+.row span.box2 {
+  box-shadow: 0 4px 8px 0 rgba(255, 0, 0, 0.979);
+  background-color: black;
+  border-width: 5px;
+  border-color: black;
+  border-radius: 5%;
+  width: 160px;
+  height: 120px;
+  display: block;
+  margin-left: 50px;
+  margin-top: 10%;
+  float: left;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 100px;
+  text-align: center;
+  color: red;
+}
+
 .wrap {
   width: 30%;
   position: absolute;
@@ -54,7 +89,6 @@ div.container {
   margin-top: -10%;
 }
 
-/* Add rounded corners to the top left and the top right corner of the image */
 img {
   border-radius: 8px 8px 0 0;
   border-style: none;
@@ -96,14 +130,10 @@ div p {
 }
 
 input.text {
-  /* -webkit-appearance: textfield; */
   background-color: white;
-  /* -webkit-rtl-ordering: logical; */
   cursor: text;
   padding: 1px;
   border: 9px solid black;
-  /* border-style: inset; */
-
   border-image: initial;
   width: 50%;
   height: 50px;

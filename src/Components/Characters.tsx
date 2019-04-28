@@ -89,8 +89,14 @@ export default class Characters extends Component<Props> {
               {!!showMoreInfo ? (
                 <>
                   <p>{comic.description}</p>
-                  <p>comics: {comic.comics.available} </p>
-                  <p> series: {comic.series.available}</p>
+                  <div className="row">
+                    <span className="box1">
+                      {comic.comics.available + " " + "comics"}
+                    </span>
+                    <span className="box2">
+                      {comic.series.available + " " + "series"}
+                    </span>
+                  </div>
                 </>
               ) : null}
               <button onClick={this.onShowMoreInfo}> Ver mais..</button>
