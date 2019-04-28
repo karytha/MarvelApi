@@ -91,15 +91,22 @@ export default class Characters extends Component<Props> {
                   <p>{comic.description}</p>
                   <div className="row">
                     <span className="box1">
-                      {comic.comics.available + " " + "comics"}
+                      {comic.comics.available <= 1
+                        ? comic.comics.available + " " + "comic"
+                        : comic.comics.available + " " + "comics"}
                     </span>
                     <span className="box2">
-                      {comic.series.available + " " + "series"}
+                      {comic.series.available <= 1
+                        ? comic.series.available + " " + "serie"
+                        : comic.series.available + " " + "series"}
                     </span>
                   </div>
                 </>
               ) : null}
-              <button onClick={this.onShowMoreInfo}> Ver mais..</button>
+              <button onClick={this.onShowMoreInfo}>
+                {" "}
+                {!!this.state.showMoreInfo ? "Hide" : "Show More"}
+              </button>
             </div>
           </div>
         </div>

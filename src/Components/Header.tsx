@@ -1,11 +1,10 @@
 import React, { Component } from "react";
-import Background from "../Images/Marvel2.jpg";
+
 import "../CSS/Header.css";
 
 const myStyles = {
-  backgroundImage: "url(" + Background + ")",
+  // backgroundImage: "url(" + Background + ")",
   height: "25vh",
-  width: "100%",
   backgroundSize: "cover"
 };
 
