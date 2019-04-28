@@ -78,14 +78,15 @@ export default class Characters extends Component<Props> {
                 alt="Avatar"
               />
               <h4>{comic.name}</h4>
-
-              <input
-                id="checkbox"
-                type="checkbox"
-                className="checkbox"
-                onChange={() => this.onChecked(comic)}
-              />
-
+              <label className="container-input">
+                <input
+                  id="checkbox"
+                  type="checkbox"
+                  className="checkbox"
+                  onChange={() => this.onChecked(comic)}
+                />
+                <span className="checkmark" />
+              </label>
               {!!showMoreInfo ? (
                 <>
                   <p>{comic.description}</p>
