@@ -1,6 +1,6 @@
 html {
-  /* background-color: rgb(8, 8, 54); */
-  background-image: url("../Images/universo3.jpg");
+  background-color: red;
+  /* background-image: url("../Images/universo3.jpg"); */
 }
 div.body {
   margin-top: 100px;
