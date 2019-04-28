@@ -5,6 +5,7 @@ import "../CSS/Header.css";
 const myStyles = {
   backgroundImage: "url(" + Background + ")",
   height: "25vh",
+  width: "100%",
   backgroundSize: "cover"
 };
 
