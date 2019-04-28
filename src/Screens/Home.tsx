@@ -4,37 +4,6 @@ import "../CSS/Home.css";
 import Bottom from "../Components/Bottom";
 import Characters from "../Components/Characters";
 
-interface Thumbnail {
-  path: string;
-  extension: string;
-}
-
-interface Series {
-  available: number;
-  collectionURI: any;
-  items: any;
-  returned: number;
-}
-
-interface Stories {
-  resourceURL: any;
-  name: string;
-  type: any;
-}
-interface Comic {
-  id: string;
-  name: string;
-  description: string;
-  thumbnail: Thumbnail;
-  modified: string;
-  events: any;
-  resourceURL: any;
-  stories: Stories;
-  series: Series;
-  comics: Series; //coloquei o mesmo tipo de interface que Series,
-  // porque os dois contêm os mesmos elementos com os mesmos tipos
-}
-
 export default class Home extends Component {
   state = {
     comics: [],
