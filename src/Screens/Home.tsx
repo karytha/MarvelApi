@@ -3,7 +3,6 @@ import Header from "../Components/Header";
 import "../CSS/Home.css";
 import Bottom from "../Components/Bottom";
 import Characters from "../Components/Characters";
-import { any } from "prop-types";
 
 interface Thumbnail {
   path: string;
@@ -33,14 +32,13 @@ interface Comic {
   stories: Stories;
   series: Series;
   comics: Series; //coloquei o mesmo tipo de interface que Series,
-  // porque os dois cont�m os mesmos elementos com os mesmos tipos
+  // porque os dois contêm os mesmos elementos com os mesmos tipos
 }
 
 export default class Home extends Component {
   state = {
     comics: [],
-    search: " ",
-    favorite: false
+    search: " "
   };
 
   async fetchCharacters(search: string) {
@@ -59,27 +57,8 @@ export default class Home extends Component {
     this.fetchCharacters(this.state.search);
   };
 
-  // getFavorites = (comic: any) => {
-  //   const comicLocal = JSON.parse(localStorage.getItem(comic.id) || "{}");
-  //   {
-  //     comicLocal.map((comic: any) => {
-  //       <div key={comic.id}>
-  //         <p>{comic.name}</p>
-  //       </div>;
-  //     });
-  //   }
-  //   console.log(comicLocal);
-  // };
-
-  // onChangeFavorites = (comic: any) => {
-  //   this.setState({ favorite: !this.state.favorite });
-  //   !!this.state.favorite ? this.getFavorites(comic.id) : null;
-  //   console.log(this.getFavorites(comic.id));
-  // };
-
   render() {
     const { comics } = this.state;
-    const { favorite } = this.state;
 
     return (
       <div>
@@ -97,8 +76,7 @@ export default class Home extends Component {
             return <Characters comic={comic} />;
           })}
         </div>
-        {/* <button onClick={this.onChangeFavorites} />
-        {!!favorite ? this.getFavorites(comics) : null} */}
+
         <Bottom title="MARVEL" />
       </div>
     );
