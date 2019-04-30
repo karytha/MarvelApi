@@ -90,7 +90,7 @@ div.container {
   margin-top: -10%;
 }
 
-img {
+div.container img {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.959);
   border-radius: 0px 20px 0px 20px;
   border-style: none;
@@ -152,7 +152,6 @@ input.checkbox {
   margin-top: -150px;
   background-color: white;
   width: 30px;
-  float: left;
 }
 button {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.959);
@@ -160,7 +159,7 @@ button {
   text-decoration: none;
   font-weight: 150;
   font-style: bold;
-  background-color: #ff0000;
+  background-color: red;
   border-color: #82adb4;
   color: whitesmoke;
   border-radius: 10px;
@@ -173,8 +172,8 @@ button {
 }
 
 label.container-input {
-  display: block;
-  position: relative;
+  display: inline-block;
+  position: absolute;
   margin-left: 90%;
   margin-top: -150px;
   padding-left: 35px;
@@ -185,7 +184,6 @@ label.container-input {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  float: left;
 }
 
 label.container-input input {
@@ -195,15 +193,43 @@ label.container-input input {
   height: 0;
   width: 0;
   color: #f5f0f0;
+  display: block;
 }
 
 label.container-input span.checkmark {
   position: absolute;
-  top: 0;
-  left: 0;
-  height: 25px;
-  width: 25px;
-  background-color: red;
+  top: -50px;
+  left: 100px;
+  height: 40px;
+  width: 40px;
+  margin-right: -20px;
+  background-color: gray;
+  border-color: gray;
+  display: block;
+  -webkit-clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
 }
 .checkmark:after {
   content: "";
@@ -211,16 +237,30 @@ label.container-input span.checkmark {
   display: none;
 }
 .container .checkmark:after {
-  left: 9px;
+  left: 5px;
   top: 5px;
-  width: 5px;
-  height: 10px;
-  border: solid black;
-  border-radius: 50%;
-  border-width: 0 3px 3px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
+  height: 30px;
+  width: 30px;
+  /* border: solid black; */
+  border-radius: 80%;
+  background-image: url("../Images/like2.png");
+  background-color: yellow;
+  /* border-width: 0 3px 3px 0;  */
+  /* -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg); */
+  /* transform: rotate(45deg); */
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
 }
 
 .container input:checked ~ .checkmark:after {

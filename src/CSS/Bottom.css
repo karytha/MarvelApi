@@ -12,7 +12,7 @@ div h1 {
   font-size: 900%;
   font-weight: 700;
   font-style: bold;
-  background-color: #ff0000;
+  background-color: #a12529;
   color: whitesmoke;
   padding: 0.25rem 0.5rem;
   display: inline-block;
@@ -20,4 +20,14 @@ div h1 {
   position: relative;
   align-items: center;
   font-weight: bold;
+}
+
+img {
+  border-style: none;
+  height: 100%;
+  width: 40%;
+
+  margin: 0auto;
+  border: 6px solid black;
+  z-index: inherit;
 }

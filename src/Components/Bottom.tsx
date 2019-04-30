@@ -1,22 +1,18 @@
 import React, { Component } from "react";
 import "../CSS/Bottom.css";
+import Marvel from "../Images/Marvel.png";
 
 const myStyles = {
   height: "25vh",
   backgroundSize: "cover",
-  // h1: "fontSize: 900%",
   backgroudColor: "#000000"
 };
 
-type Props = {
-  title: string;
-};
-
-class Bottom extends Component<Props> {
+class Bottom extends Component {
   render() {
     return (
       <div className="header" style={myStyles}>
-        <h1> {this.props.title}</h1>
+        <img src={Marvel} />
       </div>
     );
   }

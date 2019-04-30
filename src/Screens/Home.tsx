@@ -20,9 +20,9 @@ export default class Home extends Component {
     this.setState({ comics: results });
   }
 
-  updateSearch = (e: any) => {
-    console.log(e.target.value);
-    this.setState({ search: e.target.value });
+  updateSearch = (e: React.FormEvent<EventTarget>): void => {
+    const target = e.target as HTMLInputElement;
+    this.setState({ search: target.value });
     this.fetchCharacters(this.state.search);
   };
 
@@ -46,7 +46,7 @@ export default class Home extends Component {
           })}
         </div>
 
-        <Bottom title="MARVEL" />
+        <Bottom />
       </div>
     );
   }
